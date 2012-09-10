@@ -3,7 +3,7 @@ Enclosure
 
 ZooKeeper configuration tool
 
-Run ./Enclosure.py -s _ZK server ip_ -mod _root node directory_
+Run ./Enclosure.py -s [_ZK server ip_] -mod [_root node directory_]
 This will build a znode for each directory inside the provided root node directory.
 The first file in that directory will have it's data loaded into the znode (no error handligf for large files at the moment).
 
