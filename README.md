@@ -14,7 +14,8 @@ run against a directory structured like so:
     ├── dev
     │   └── demo
     ├── prod
-    └── test```
+    └── test
+```
 
 Would build an /environments node with 3 children (dev, test & prod) and the file "demo" would have it's data loaded into the dev node.
 
