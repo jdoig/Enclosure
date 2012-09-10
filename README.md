@@ -9,16 +9,16 @@ The first file in that directory will have it's data loaded into the znode (no e
 
 e.g: _./Enclosure.py -s 127.0.0.1:2181 -mod ~/Documents/enctest
 run against a directory structured like so:
-~/Documents/enctest
+```~/Documents/enctest
 └── environments
     ├── dev
     │   └── demo
     ├── prod
-    └── test
+    └── test```
 
 Would build an /environments node with 3 children (dev, test & prod) and the file "demo" would have it's data loaded into the dev node.
 
-ENC
+Enc
 =========
 
 The join method in: Enc-py/Enc.py will create an ephemeral node under the provided environment for the supplied name. If that name ends in a hyphen then the node name will be sequential. An optional callback can be provided, this funtion will fire once, initially, then once each time the parent nodes data is set. This method passes back the ZooKeeper client it used to connect to the server.
