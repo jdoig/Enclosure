@@ -24,7 +24,7 @@ class TestEnc (unittest.TestCase):
 
         #set the data of the parent node
         zk.set(parent_node,data= "message : hello james")
-        self.assertTrue(self.foo_was_called,msg= "callback method cas not called on parent node data change")
+        self.assertTrue(self.foo_was_called,msg= "callback method was not called on parent node data change")
         zk.stop()
 
 
