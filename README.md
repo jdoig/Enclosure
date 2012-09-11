@@ -41,7 +41,7 @@ e.g: calling:
 Enc.join(   server ='127.0.0.1:2181',
             environment ='environments/dev',
             name = 'test-py',
-            on_parent_environment_change=load-config)
+            on_parent_data_change=load-config)
 ```
 Would create an ephemeral znode under /environments/dev called /test-py
 that would call the load-config method whenever /environments/dev's data was changed.

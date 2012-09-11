@@ -1,6 +1,6 @@
 from kazoo.client import KazooClient
 
-def join(server, environment, name, on_parent_environment_change = None):
+def join(server, environment, name, on_parent_data_change = None):
     zk = KazooClient(hosts=server)
     zk.start() # connect to zookeeper
 
@@ -12,8 +12,8 @@ def join(server, environment, name, on_parent_environment_change = None):
 
     # if a callback was provided trigger it whenever parents data changes...
     # for example to update variables on config changes.
-    if on_parent_environment_change:
-        zk.DataWatch(environment, func = on_parent_environment_change)
+    if on_parent_data_change:
+        zk.DataWatch(environment, func = on_parent_data_change)
 
     #hand zookeeper client back to caller
     return zk

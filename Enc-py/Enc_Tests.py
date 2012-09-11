@@ -18,7 +18,7 @@ class TestEnc (unittest.TestCase):
             server ='127.0.0.1:2181',
             environment ='environments/dev',
             name = 'test-py',
-            on_parent_environment_change=self.foo)
+            on_parent_data_change=self.foo)
 
         print "original parent data --> " +  zk.get(parent_node)[0]
 
