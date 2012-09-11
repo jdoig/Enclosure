@@ -28,12 +28,12 @@ run against a directory structured like so:
     └── test
 ```
 
-Would build an /environments node with 3 children (dev, test & prod) and the file "test-app" would have it's data loaded into the dev node.
+Would build an /environments node with 3 children (/dev, /test & /prod) and the file: "test-app" would have it's data loaded into the /dev node.
 
 Enc
 =========
 
-Enc is a very simple library using an existing ZooKeeper client that allows an application to join one of the logical environment discussed above.
+Enc is a very simple library that uses an existing ZooKeeper client to allow an application to join one of the logical environment discussed above.
 The join method in: Enc.py will create an ephemeral node under the provided environment for the supplied name. If that name ends in a hyphen then the node name will be sequential (see ZooKeeper documentation). An optional callback can be provided, this function will fire once, initially, then once each time the parent nodes data is set, typically this function is what will be used to load the configuration from the parent node into our application.  This method passes back the ZooKeeper client it used to connect to the server.
 
 e.g: calling:
